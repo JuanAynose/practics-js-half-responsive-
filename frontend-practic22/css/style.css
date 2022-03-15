@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+    background-image: url("../assets/images/bg-bottom.svg"),url("../assets/images/bg-top.svg");
+    background-position: left bottom, right top;
+    background-repeat: no-repeat;
+    height: 96vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .9em;
+    background-color: hsl(240, 78%, 98%);
+}
+
+/*Card container styles*/
+.card_child{
+    display: inline-block;
+    margin: 0;
+    padding: 1em 1.5em;
+    background-color: #fff;
+    border-radius: .5em;
+    box-shadow:5px 5px 20px hsl(234, 14%, 74%);
+}
+
+.card_child:nth-child(2){
+    padding: 2.5em 1.5em;
+    background-image: linear-gradient(160deg,#a3a8f0, #696fdd);
+    color: #fff;
+}
+
+.price_top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+}
+/*Card list styles*/
+.card_list{
+    padding-left: 0;
+}
+
+.card_item{
+    border-bottom: 1px solid hsla(234, 14%, 74%,50%);
+    list-style: none;
+    padding: .5em 0;
+}
+
+.card_item:first-child{
+    border-top: 1px solid hsla(234, 14%, 74%,50%);
+
+}
+/*paragrahps styles*/
+.card_price{
+    font-size: 3rem;
+    color: hsl(232, 13%, 33%);
+}
+
+.prices{
+    color: hsl(232, 13%, 33%);
+}
+
+.price_button{
+    color: hsl(234, 14%, 74%);
+}
+
+.card_info{
+    color: hsl(233, 13%, 49%);
+    font-size: .8em;
+}
+
+.card_plan{
+    color: hsl(233, 13%, 49%);
+    font-size: 1em;
+}
+
+.card_child:nth-child(2) .card_price,
+.card_child:nth-child(2) .card_info,
+.card_child:nth-child(2) .card_plan{
+    color: #fff;
+}
+
+/*buttons*/
+.card_button{
+    width: 220px;
+    padding: .8em 0;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8em;
+    color: #fff;
+    border-radius: .5em;
+    background-image: linear-gradient(160deg,#a3a8f0, #696fdd);
+    border: .5px solid transparent;
+    cursor: pointer;
+}
+
+.card_child:nth-child(2) .card_button{
+    background-image: none;
+    background-color: #fff;
+    color: hsl(237, 63%, 64%);
+}
+/*Hoovers*/
+.card_button:hover{
+    background-color: #fff;
+    color:hsl(237, 63%, 64%); ;
+    background-image: none;
+    border:.5px solid hsl(237, 63%, 64%);
+}
+
+.card_child:nth-child(2) .card_button:hover{
+    background-color: hsl(237, 63%, 64%);;
+    color:#fff;
+    background-image: none;
+    border:.5px solid #fff;
+}
+/**/
+.botton-top{
+    display: inline-block;
+    padding: 0;
+    margin: 0 1em;
+    margin-left: .5em;
+    width: 40px;
+    height: 20px;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.checkuwu{
+    display: none;
+}
+
+.check_ball{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border-radius: 2em;
+    background-image: linear-gradient(160deg,#a3a8f0, #696fdd);
+}
+
+.check_ball::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.checkuwu:checked ~ .check_ball::after{
+    transform: translateX(20px);
+}
