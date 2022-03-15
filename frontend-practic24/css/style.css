@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/*container styles*/
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.content{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.content_right{
+    width: 40%;
+}
+
+.content_left{
+    background-image: url("../assets/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    height: 100%;
+}
+
+/*paragraphs styles*/
+.text_top-uwu{
+    font-size: 4rem;
+    line-height: 1;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.paragraph{
+    color: hsl(0, 36%, 70%);
+    line-height: 1.5;
+}
+
+.text_email{
+    color: hsl(0, 36%, 70%);
+    margin:.5em 0;
+    margin-left: 1em;
+}
+
+/*photo*/
+.content_right{
+    background-image: url("../assets/images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.icon{
+    margin-top: 3em;
+}
+
+/*email settings*/
+.footer_submit{
+    position: relative;
+}
+
+.email_uwu{
+    width: 400px;
+    padding: 1em 1.5em;
+    border-radius: 2em;
+    border:1px solid hsl(0, 36%, 70%);
+    color: hsl(0, 6%, 24%);
+}
+
+.email_uwu::placeholder{
+    color: hsl(0, 36%, 70%);
+}
+
+.button{
+    position: absolute;
+    right: 20px;
+    top: 1px;
+    padding: .7em 2.5em;
+    border: none;
+    border-radius: 2em;
+    box-shadow: -5px 5px 10px #f8bfbf;
+    background-image: linear-gradient(135deg,#f8bfbf, #ee8c8c);
+    cursor: pointer;
+}
+
+.button:hover{
+    background-image: linear-gradient(135deg,#ffffff, #ee8c8c);
+}
+
+.icon_submit{
+    position: absolute;
+    right: 120px;
+    top: 8px;
+}
+
+.email_uwu:focus{
+    outline: none;
+}
+
+/**/
+.text_email:required{
+    outline: 1px solid red;
+}
+
+.text_email, .icon_submit{
+    visibility: hidden;
+}
+
+.text_email.active, .icon_submit.active{
+    visibility: visible;
+}
