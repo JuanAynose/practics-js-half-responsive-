@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: hsl(180, 52%, 96%);
+    font-family: 'Spartan', sans-serif;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.bg_top{
+    background-image: url("../assets/images/bg-header-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5em;
+    background-color: var(--dark-cyan);
+}
+
+:root{
+    --dark-cyan:hsl(180, 29%, 50%);
+    --light-grayish-cyan: hsl(180, 31%, 95%);
+    --dark-grayish-cyan:hsl(180, 8%, 52%);
+    --very-dark-grayish:hsl(180, 14%, 20%);
+}
+
+/*card container styles*/
+.job_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 4em 6em;
+    border-radius: .4em;
+    border-left: 5px solid var(--dark-cyan);
+    box-shadow: 5px 5px 12px var(--dark-cyan);
+    padding: 1em;
+}
+
+.content_left{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.content_right_top{
+    display: inline-block;
+}
+
+/*paragraphs styles*/
+.company_name{
+    font-weight: 700;
+    color: var(--dark-cyan);
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.job_features{
+    background-color: var(--dark-cyan);
+    padding: .2em .6em;
+    border-radius: 2em;
+    color: #fff;
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.job_features.job_hidden{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+
+.job_info .job_features:last-child{
+    background-color: var(--very-dark-grayish);
+}
+
+.job_name{
+    font-weight: 700;
+    color: var(---very-dark-grayish);
+}
+
+.job_item_info{
+    color: var(--dark-grayish-cyan);
+    margin: 0 auto;
+}
+
+.job_requiments{
+    text-decoration: none;
+    color: var(--dark-cyan);
+    font-weight: 700;
+    padding:.4em .5em;
+    background-color: hsla(180, 29%, 50%, .1);
+    margin: .5em .5em;
+    border-radius: .2em;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.job_card.job_hidden{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+/*list style*/
+.job_item{
+    position: relative;
+    display: inline-block;
+    margin: 0 .5em;
+}
+
+.job_time{
+    padding-left: 0;
+    list-style: none;
+}
+
+.job_time .job_item:nth-child(2)::after,
+.job_time .job_item:nth-child(3)::after{
+    content: "";
+    position: absolute;
+    top: .3em;
+    width: 5px;
+    height: 5px;
+    left: -.6em;
+    border-radius: 50%;
+    background-color: var(--dark-grayish-cyan);
+}
+
+
+/*filter styles*/
+.filters{
+    border-left: none;
+    padding: 1em 4em;
+}
+
+.clear{
+    color: var(--dark-cyan);
+}
+
+.filter_tag{
+    display: inline-block;
+    background-color: hsla(180, 29%, 50%, .1);
+    padding: .3em 0 .3em .5em;
+    border-radius: .4em;
+    margin: .5em;
+    cursor: pointer;
+}
+
+.delete_filter{
+    background-color: var(--dark-cyan);
+    padding:.3em .5em;
+    border-top-right-radius: .4em;
+    border-bottom-right-radius: .4em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    margin-left: .4em;
+}
+
+.filter_name{
+    display: inline-block;
+    margin: 0;
+    color: var(--dark-cyan);
+}
+
+.filters.hidden{
+    height: 0;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/*all hover events*/
+.job_requiments:hover{
+    background-color: var(--dark-cyan);
+    color:#fff;
+    transition: .3s ease;
+}
+
+.delete_filter:hover{
+    background-color: var(--very-dark-grayish);
+}
+
+/*icon styles*/
+.card_image{
+    display: inline-block;
+}
+
+
+@media screen and (max-width:520px){
+    .job_card{
+        margin: 2em 1em;
+        display: block;
+    }
+
+    .card_image{
+        width: 50px;
+        position: absolute;
+        top: -1.5em;
+    }
+    
+    .company_name{
+        margin-top: 1.5em;
+    }
+
+    .content_right{
+        border-bottom:1px solid var(--dark-grayish-cyan);
+        margin-bottom: 1em;
+    }
+
+    .filters{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .filters .content_right{
+        border: none;
+    }
+
+    .bg_top{
+        background-image: url("../assets/images/bg-header-mobile.svg");
+    }
+
+}
